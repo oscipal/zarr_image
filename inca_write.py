@@ -3,6 +3,17 @@ import numpy as np
 import zarr
 import os
 
+artifact_path = "/tmp/INCAL_HOURLY_RR_202506.nc"  # adjust if needed
+
+if os.path.isfile(artifact_path):
+    print(f"✅ File found: {artifact_path}")
+    print(f"File size: {os.path.getsize(artifact_path)} bytes")
+else:
+    print(f"❌ File not found: {artifact_path}")
+    # Optionally, raise an error or exit here
+    raise FileNotFoundError(f"File not found: {artifact_path}")
+
+
 def get_idx(array1, array2):
     min = np.where(array1==array2[0])[0][0]
     max = np.where(array1==array2[-1])[0][0]+1

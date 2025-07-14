@@ -19,8 +19,6 @@ def get_idx(array1, array2):
     max = np.where(array1==array2[-1])[0][0]+1
     return min, max
 
-filename = "INCAL_HOURLY_RR_202506.nc"
-artifact_path = os.path.join("/mnt/vol", filename)
 nfs_path = "/eodc/private/openeo_platform/zarr_nacho"
 
 data = xr.open_dataset(artifact_path, mask_and_scale=False).load()

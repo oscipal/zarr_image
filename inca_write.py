@@ -3,7 +3,7 @@ import numpy as np
 import zarr
 import os
 
-artifact_path = "/mnt/vol/INCAL_HOURLY_RR_202506.nc"  # adjust if needed
+artifact_path = "/tmp/INCAL_HOURLY_RR_202506.nc"  # adjust if needed
 
 if os.path.isfile(artifact_path):
     print(f"✅ File found: {artifact_path}")

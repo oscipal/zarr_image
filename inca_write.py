@@ -12,7 +12,7 @@ filename = "INCAL_HOURLY_RR_202506.nc"
 artifact_path = os.path.join("/tmp", filename)
 nfs_path = "/eodc/private/openeo_platform/zarr_nacho"
 
-data = xr.open_dataset(f"/eodc/private/openeo_platform/zarr_nacho/{filename}", mask_and_scale=False).load()
+data = xr.open_dataset(artifact_path, mask_and_scale=False).load()
 
 store = zarr.storage.LocalStore("/eodc/private/openeo_platform/zarr_nacho/INCA_test.zarr")
 group = zarr.group(store=store)

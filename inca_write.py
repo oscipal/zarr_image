@@ -3,7 +3,7 @@ import numpy as np
 import zarr
 import os
 
-artifact_path = "/tmp/INCAL_HOURLY_RR_202506.nc"  # adjust if needed
+artifact_path = "/mnt/vol/INCAL_HOURLY_RR_202506.nc"  # adjust if needed
 
 if os.path.isfile(artifact_path):
     print(f"✅ File found: {artifact_path}")
@@ -20,7 +20,7 @@ def get_idx(array1, array2):
     return min, max
 
 filename = "INCAL_HOURLY_RR_202506.nc"
-artifact_path = os.path.join("/tmp", filename)
+artifact_path = os.path.join("/mnt/vol", filename)
 nfs_path = "/eodc/private/openeo_platform/zarr_nacho"
 
 data = xr.open_dataset(artifact_path, mask_and_scale=False).load()

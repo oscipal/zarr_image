@@ -1,6 +1,7 @@
 import xarray as xr
 import numpy as np
 import zarr
+import os
 
 def get_idx(array1, array2):
     min = np.where(array1==array2[0])[0][0]

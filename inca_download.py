@@ -7,6 +7,7 @@ def download_data(var):
     filename = os.path.basename(url)
     base = "/tmp"
     urlretrieve(url, os.path.join(base,filename))
+    print(var)
                               
 if __name__ == "__main__":
     var = sys.argv[1]

@@ -5,7 +5,7 @@ import os
 import sys
 
 def write_data(var):
-    artifact_path = f"/tmp/INCAL_HOURLY_{var}_202506.nc"  # adjust if needed
+    artifact_path = f"/tmp/INCAL_HOURLY_{var}_{ym}.nc"  # adjust if needed
 
     def get_idx(array1, array2):
         min = np.where(array1==array2[0])[0][0]
@@ -32,5 +32,6 @@ def write_data(var):
 
 if __name__=="__main__":
     var = sys.argv[1]
-    write_data(var)
+    ym = sys.arv[2]
+    write_data(var, ym)
     

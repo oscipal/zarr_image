@@ -2,7 +2,7 @@ from urllib.request import urlretrieve
 import os
 import sys
 
-def download_data(var):
+def download_data(var, ym):
     print(var)
     url = f"https://public.hub.geosphere.at/datahub/resources/inca-v1-1h-1km/filelisting/{var}/INCAL_HOURLY_{var}_{ym}.nc"
     filename = os.path.basename(url)

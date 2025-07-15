@@ -4,7 +4,7 @@ import zarr
 import os
 import sys
 
-def write_data(var):
+def write_data(var, ym):
     artifact_path = f"/tmp/INCAL_HOURLY_{var}_{ym}.nc"  # adjust if needed
 
     def get_idx(array1, array2):

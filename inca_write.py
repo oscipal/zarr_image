@@ -32,6 +32,6 @@ def write_data(var, ym):
 
 if __name__=="__main__":
     var = sys.argv[1]
-    ym = sys.arv[2]
+    ym = sys.argv[2]
     write_data(var, ym)
     

@@ -10,7 +10,7 @@ jobs:
 
     permissions:
       contents: read
-      packages: write  # Wichtig für ghcr.io
+      packages: write
       id-token: write
 
     steps:
